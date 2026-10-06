@@ -5,8 +5,7 @@ End-to-end retail data engineering project using Azure Data Factory, ADLS Gen2, 
 
 ## Architecture
 
-![Azure Retail Data Engineering Architecture]("C:\Users\Prakh\Downloads\architecture.png")
-
+![Azure Retail Data Engineering Architecture](./architecture.png)
 ## Project Overview
 
 This project demonstrates an end-to-end Azure data engineering pipeline for processing retail data.
