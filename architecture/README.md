@@ -56,7 +56,7 @@ The pipeline ingests raw CSV data using Azure Data Factory, stores it in ADLS Ge
    Creates Gold views and an external table for SQL-based analytics.
 
 
-   ## Key Features
+## Key Features
 
 - Dynamic ingestion of multiple CSV files using Azure Data Factory
 - Bronze, Silver and Gold data lake architecture
