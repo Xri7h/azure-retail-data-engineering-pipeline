@@ -1,0 +1,18 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "factoryName": {
+            "value": "adfawproj1"
+        },
+        "DataLakeStorage1_accountKey": {
+            "value": ""
+        },
+        "DataLakeStorage1_properties_typeProperties_url": {
+            "value": "https://awstoragedatalakeproj1.dfs.core.windows.net/"
+        },
+        "Httplinkservice_properties_typeProperties_url": {
+            "value": "https://raw.githubusercontent.com/"
+        }
+    }
+}
