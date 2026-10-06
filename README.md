@@ -5,51 +5,33 @@ End-to-end retail data engineering project using Azure Data Factory, ADLS Gen2, 
 
 ## Architecture
 
-                         AZURE RETAIL DATA ENGINEERING PIPELINE
-
-┌─────────────────────────┐
-│      Source Data        │
-│    AdventureWorks CSVs  │
-└────────────┬────────────┘
-             │
-             ▼
-┌─────────────────────────┐
-│   Azure Data Factory    │
-│ Lookup → ForEach        │
-│ → Dynamic Copy          │
-└────────────┬────────────┘
-             │
-             ▼
-┌─────────────────────────┐
-│       ADLS Gen2         │
-│        Bronze           │
-│      Raw CSV Data       │
-└────────────┬────────────┘
-             │
-             ▼
-┌─────────────────────────┐
-│   Azure Databricks      │
-│       PySpark           │
-│ Cleaning & Transformation│
-└────────────┬────────────┘
-             │
-             ▼
-┌─────────────────────────┐
-│       ADLS Gen2         │
-│        Silver           │
-│    Parquet Data         │
-└────────────┬────────────┘
-             │
-             ▼
-┌─────────────────────────┐
-│ Azure Synapse Analytics │
-│   Gold Views / Tables   │
-└────────────┬────────────┘
-             │
-             ▼
-┌─────────────────────────┐
-│      SQL Analytics      │
-└─────────────────────────┘
+```text
+Source Data
+AdventureWorks CSVs
+        |
+        v
+Azure Data Factory
+Lookup -> ForEach -> Dynamic Copy
+        |
+        v
+ADLS Gen2 - Bronze
+Raw CSV Data
+        |
+        v
+Azure Databricks
+PySpark Transformations
+        |
+        v
+ADLS Gen2 - Silver
+Parquet Data
+        |
+        v
+Azure Synapse Analytics
+Gold Views / External Table
+        |
+        v
+SQL Analytics
+```
 
 
 ## Project Overview
