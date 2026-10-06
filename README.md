@@ -5,7 +5,53 @@ End-to-end retail data engineering project using Azure Data Factory, ADLS Gen2, 
 
 ## Architecture
 
-![Azure Retail Data Engineering Architecture](./architecture.png)
+                         AZURE RETAIL DATA ENGINEERING PIPELINE
+
+┌─────────────────────────┐
+│      Source Data        │
+│    AdventureWorks CSVs  │
+└────────────┬────────────┘
+             │
+             ▼
+┌─────────────────────────┐
+│   Azure Data Factory    │
+│ Lookup → ForEach        │
+│ → Dynamic Copy          │
+└────────────┬────────────┘
+             │
+             ▼
+┌─────────────────────────┐
+│       ADLS Gen2         │
+│        Bronze           │
+│      Raw CSV Data       │
+└────────────┬────────────┘
+             │
+             ▼
+┌─────────────────────────┐
+│   Azure Databricks      │
+│       PySpark           │
+│ Cleaning & Transformation│
+└────────────┬────────────┘
+             │
+             ▼
+┌─────────────────────────┐
+│       ADLS Gen2         │
+│        Silver           │
+│    Parquet Data         │
+└────────────┬────────────┘
+             │
+             ▼
+┌─────────────────────────┐
+│ Azure Synapse Analytics │
+│   Gold Views / Tables   │
+└────────────┬────────────┘
+             │
+             ▼
+┌─────────────────────────┐
+│      SQL Analytics      │
+└─────────────────────────┘
+
+
 ## Project Overview
 
 This project demonstrates an end-to-end Azure data engineering pipeline for processing retail data.
