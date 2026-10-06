@@ -116,9 +116,6 @@ azure-retail-data-engineering-pipeline/
 ├── README.md
 ├── Silver_layer.ipynb
 │
-├── Architecture/
-│   └── README.md
-│
 ├── adf/
 │   ├── ARMTemplateForFactory.json
 │   └── ARMTemplateParametersForFactory.json
