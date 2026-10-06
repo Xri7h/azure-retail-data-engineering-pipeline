@@ -161,7 +161,6 @@ This allows the processed data to be queried using SQL.
 
 Azure Managed Identity is used for secure access between Azure services and ADLS Gen2 without exposing storage account credentials in the project code.
 
-> Note: Any sensitive credentials or secrets should never be committed to GitHub.
 
 ## Project Objective
 
